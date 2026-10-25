@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-adsense-account" content="ca-pub-1162564440098273">
 <title>Xoftverse</title>
-<meta name="description" content="Xoftverse is a small studio making handcrafted software: Milaan ERP for billing and stock, an AI engineer learning path, pencil-and-paper games, Scrawl, a drawing game for friends, and DoodlePin, doodle pets for your Mac desktop.">
+<meta name="description" content="Xoftverse is a small studio making handcrafted software: gamified career paths into AI, pencil-and-paper games, Scrawl, a drawing game for friends, and DoodlePin, doodle pets for your Mac desktop.">
 <link rel="canonical" href="https://xoftverse.com/">
 <meta name="theme-color" content="#efe9dd" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0f1d19" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xoftverse.com/">
 <meta property="og:title" content="Xoftverse · Precise as code. Made by hand.">
-<meta property="og:description" content="Billing for small businesses, a path into AI engineering, and games to play with friends, and doodle pets for your Mac. Handcrafted software.">
+<meta property="og:description" content="Career paths into AI, games to play with friends, and doodle pets for your Mac. Handcrafted software.">
 <link rel="icon" href="/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,6 @@
     --shadow: 0 1px 1px rgba(40,30,10,.07), 0 3px 6px rgba(40,30,10,.05), 0 16px 32px -16px rgba(40,30,10,.35);
     --shadow-up: 0 2px 2px rgba(40,30,10,.07), 0 8px 14px rgba(40,30,10,.06), 0 32px 48px -20px rgba(40,30,10,.45);
 
-    --erp: #dc3d33;  --erp-soft: #f5e0da;
     --ai:  #4048c8;  --ai-soft:  #e2e3f5;
     --gg:  #45453f;  --gg-soft:  #e8e3d6;
     --scr: #c8740a;  --scr-soft: #f5e5c9;
@@ -58,7 +57,6 @@
       --shadow: 0 1px 1px rgba(0,0,0,.3), 0 16px 32px -16px rgba(0,0,0,.75);
       --shadow-up: 0 2px 2px rgba(0,0,0,.3), 0 32px 48px -20px rgba(0,0,0,.85);
 
-      --erp: #ff6a5f;  --erp-soft: #2c2a27;
       --ai:  #9ea4ff;  --ai-soft:  #1f2a37;
       --gg:  #d8d1c0;  --gg-soft:  #1f312c;
       --scr: #f4ae4b;  --scr-soft: #2b2e25;
@@ -212,18 +210,10 @@
   .card:nth-child(2) { --r: .8deg; margin-top: 30px; }
   .card:nth-child(3) { --r: .6deg; }
   .card:nth-child(4) { --r: -.9deg; margin-top: 30px; }
-  .card:nth-child(5) { --r: .4deg; }
-  /* full-width feature card */
-  .card.wide { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); grid-template-rows: auto auto auto 1fr auto; column-gap: 36px; }
-  .card.wide .meta { grid-column: 1 / -1; }
-  .card.wide .art { grid-column: 1; grid-row: 2 / 6; height: auto; min-height: 240px; margin-bottom: 0; }
-  .card.wide h3, .card.wide p, .card.wide .spec, .card.wide .go { grid-column: 2; }
-  .card.wide .spec { align-self: start; }
-  .card.wide .go { align-self: end; }
   .card:hover { transform: rotate(0deg) translateY(-6px); box-shadow: var(--shadow-up); }
   .card:focus-visible { outline: 3px solid var(--c); outline-offset: 8px; }
   .card::before { content: ""; position: absolute; inset: 9px; border-radius: 3px; pointer-events: none; border: 1.6px dashed color-mix(in srgb, var(--c) 50%, transparent); }
-  .card .tape { top: -14px; left: 50%; transform: translateX(-50%) rotate(-3deg); --c: var(--c); }
+  .card .tape { top: -14px; left: 50%; transform: translateX(-50%) rotate(-3deg); }
   .card:nth-child(even) .tape { left: 38%; transform: translateX(-50%) rotate(2.5deg); }
   /* crop marks */
   .crop { position: absolute; inset: -14px; pointer-events: none; transition: inset .35s ease; opacity: .55;
@@ -234,7 +224,6 @@
       linear-gradient(var(--muted),var(--muted)) 100% 100% / 10px 1px, linear-gradient(var(--muted),var(--muted)) 100% 100% / 1px 10px;
     background-repeat: no-repeat; }
   .card:hover .crop { inset: -20px; opacity: .8; }
-  .card.erp { --c: var(--erp); --soft: var(--erp-soft); }
   .card.ai  { --c: var(--ai);  --soft: var(--ai-soft); }
   .card.gg  { --c: var(--gg);  --soft: var(--gg-soft); }
   .card.scr { --c: var(--scr); --soft: var(--scr-soft); }
@@ -291,10 +280,6 @@
     .patch { max-width: 560px; }
     .grid { grid-template-columns: 1fr; gap: 54px; }
     .card:nth-child(n) { margin-top: 0; }
-    .card.wide { display: flex; }
-    .card.wide .art { min-height: 0; height: 176px; margin-bottom: 22px; }
-    .card.wide .spec { align-self: stretch; }
-    .card.wide .go { align-self: flex-start; }
     .rules { grid-template-columns: 1fr; }
   }
   @media (max-width: 600px) {
@@ -353,7 +338,7 @@
       <span><span class="word">xoftverse<i aria-hidden="true"></i></span><small>// handcrafted software</small></span>
     </a>
     <nav class="links" aria-label="Primary">
-      <span class="status"><span class="dot"></span>5/5 live</span>
+      <span class="status"><span class="dot"></span>4/4 live</span>
       <a href="#collection">Collection</a>
     </nav>
   </header>
@@ -362,7 +347,7 @@
     <div>
       <div class="kicker">&lt;studio&gt; code <b>+</b> craft &lt;/studio&gt;</div>
       <h1>Precise as code.<br><em>Made by hand.<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2 12 C60 4 120 18 180 9 S270 6 298 11" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 10"/></svg></em></h1>
-      <p class="lede">A small studio building software the way a maker builds furniture: measured, tested, and finished by hand. Tools to run a business, a path to learn something new, games for an evening with friends, and a few pets for your desktop.</p>
+      <p class="lede">A small studio building software the way a maker builds furniture: measured, tested, and finished by hand. A path into AI from the job you already have, games for an evening with friends, and a few pets for your desktop.</p>
       <div class="ctas">
         <a class="btn" href="#collection">Browse the collection <span aria-hidden="true">↓</span></a>
         <a class="src" href="#workbench">cat PRINCIPLES.md →</a>
@@ -371,24 +356,23 @@
 
     <div class="patch">
       <span class="tape" aria-hidden="true"></span>
-      <div class="term" role="img" aria-label="Terminal: listing the five Xoftverse products, then sewing them all by hand with zero shortcuts.">
+      <div class="term" role="img" aria-label="Terminal: listing the four Xoftverse products, then sewing them all by hand with zero shortcuts.">
         <div class="term-bar" aria-hidden="true"><span></span><span></span><span></span><em>~/xoftverse — zsh</em></div>
         <pre id="term" aria-hidden="true"><span class="p">~/xoftverse $</span> ls ./collection
-<span class="r">milaan-erp/</span>  <span class="b">ai-engineer-path/</span>
-<span class="y">graphite-games/</span>  scrawl/
-<span class="dpk">doodle-pin/</span>
+<span class="b">ai-engineer-path/</span>  <span class="y">graphite-games/</span>
+scrawl/  <span class="dpk">doodle-pin/</span>
 <span class="p">~/xoftverse $</span> sew --all --by-hand
 <span class="c">  measuring twice ........</span> <span class="p">ok</span>
 <span class="c">  cutting once ...........</span> <span class="p">ok</span>
 <span class="c">  finishing the edges ....</span> <span class="p">ok</span>
-<span class="p">✓</span> 5 pieces stitched, 0 shortcuts
+<span class="p">✓</span> 4 pieces stitched, 0 shortcuts
 <span class="p">~/xoftverse $</span> <span class="caret"></span></pre>
       </div>
       <div class="sticky hand" aria-hidden="true">every line is<br>hand-stitched ✂</div>
     </div>
   </section>
 
-  <div class="dim" aria-hidden="true">5 products · 1 studio · 0 shortcuts</div>
+  <div class="dim" aria-hidden="true">4 products · 1 studio · 0 shortcuts</div>
 
   <div class="shelf-head" id="collection">
     <h2><span>01</span>The collection</h2>
@@ -396,52 +380,30 @@
   </div>
 
   <main class="grid">
-    <a class="card erp" href="/milaanerp/">
+    <a class="card ai" href="/ai-engineer-path/">
       <span class="crop" aria-hidden="true"></span><span class="tape" aria-hidden="true"></span>
       <div class="meta"><b>No.01</b><span class="live"><span class="dot"></span>live</span></div>
       <div class="art" aria-hidden="true">
-        <svg viewBox="0 0 320 176" fill="none">
-          <rect x="92" y="26" width="136" height="128" rx="6" fill="var(--card)" stroke="currentColor" stroke-width="2"/>
-          <rect x="108" y="42" width="56" height="8" rx="4" fill="currentColor"/>
-          <path d="M108 64h104M108 78h104M108 92h78" stroke="currentColor" stroke-opacity=".35" stroke-width="4" stroke-linecap="round"/>
-          <path d="M108 108h104" stroke="currentColor" stroke-opacity=".45" stroke-width="2" stroke-dasharray="4 4"/>
-          <path d="M108 124h36" stroke="currentColor" stroke-opacity=".55" stroke-width="6" stroke-linecap="round"/>
-          <rect x="174" y="117" width="40" height="14" rx="7" fill="currentColor"/>
-          <circle cx="232" cy="38" r="20" fill="currentColor"/>
-          <path d="M223 38l7 7 12-13" stroke="var(--card)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg viewBox="0 0 320 176" fill="none" stroke-linecap="round">
+          <path d="M60 40 C130 40 150 88 236 88M60 88H236M60 136 C130 136 150 88 236 88" stroke="currentColor" stroke-opacity=".45" stroke-width="3" stroke-dasharray="9 8"/>
+          <circle cx="60" cy="40" r="12" fill="currentColor"/>
+          <circle cx="60" cy="88" r="12" fill="currentColor" fill-opacity=".7"/>
+          <circle cx="60" cy="136" r="12" fill="var(--card)" stroke="currentColor" stroke-width="3"/>
+          <path d="M54 40l4.5 4.5 7.5-8.5" stroke="var(--card)" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="148" cy="88" r="7" fill="currentColor" fill-opacity=".55"/>
+          <path d="M258 64l6.6 13.8 15 2.2-10.8 10.5 2.5 14.9L258 98.3l-13.3 7.1 2.5-14.9-10.8-10.5 15-2.2z" fill="currentColor"/>
         </svg>
       </div>
-      <h3>Milaan ERP</h3>
-      <p>GST billing, stock with batch &amp; expiry, bank limits and loan EMIs for Indian small businesses. No AMC, 30-day free trial.</p>
-      <dl class="spec"><dt>path</dt><dd>/milaanerp</dd><dt>runs on</dt><dd>Windows · macOS · offline</dd></dl>
-      <span class="go">Open the shop <svg viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h30" stroke-dasharray="5 4"/><path d="M27 1l5 5-5 5"/></svg></span>
-      <span class="note hand">no internet? no problem</span>
-    </a>
-
-    <a class="card ai" href="/ai-engineer-path/">
-      <span class="crop" aria-hidden="true"></span><span class="tape" aria-hidden="true"></span>
-      <div class="meta"><b>No.02</b><span class="live"><span class="dot"></span>live</span></div>
-      <div class="art" aria-hidden="true">
-        <svg viewBox="0 0 320 176" fill="none">
-          <path d="M58 136 C108 136 108 90 160 90 S212 44 262 44" stroke="currentColor" stroke-opacity=".5" stroke-width="3" stroke-dasharray="9 8" stroke-linecap="round"/>
-          <circle cx="58" cy="136" r="14" fill="currentColor"/>
-          <path d="M52 136l5 5 8-9" stroke="var(--card)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="108" cy="118" r="11" fill="currentColor" fill-opacity=".8"/>
-          <circle cx="160" cy="90" r="13" fill="currentColor" fill-opacity=".55"/>
-          <circle cx="212" cy="62" r="11" fill="var(--card)" stroke="currentColor" stroke-width="3"/>
-          <path d="M262 22l5.5 11.5 12.5 1.8-9 8.8 2.1 12.4L262 50.6l-11.1 5.9 2.1-12.4-9-8.8 12.5-1.8z" fill="currentColor"/>
-        </svg>
-      </div>
-      <h3>Backend → AI Engineer</h3>
-      <p>A gamified learning path that takes you from backend engineer to AI engineer, one level at a time.</p>
-      <dl class="spec"><dt>path</dt><dd>/ai-engineer-path</dd><dt>runs on</dt><dd>any browser · free</dd></dl>
-      <span class="go">Start the path <svg viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h30" stroke-dasharray="5 4"/><path d="M27 1l5 5-5 5"/></svg></span>
-      <span class="note hand">level 1 starts here</span>
+      <h3>AI Career Paths</h3>
+      <p>Make your leap into AI from the job you already have. Gamified paths for engineers, product managers and non-technical professionals, lesson by lesson.</p>
+      <dl class="spec"><dt>path</dt><dd>/ai-engineer-path</dd><dt>runs on</dt><dd>any browser · free</dd><dt>paths</dt><dd>28 · tech &amp; non-tech</dd></dl>
+      <span class="go">Find your path <svg viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h30" stroke-dasharray="5 4"/><path d="M27 1l5 5-5 5"/></svg></span>
+      <span class="note hand">start from where you are</span>
     </a>
 
     <a class="card gg" href="/graphite-games/">
       <span class="crop" aria-hidden="true"></span><span class="tape" aria-hidden="true"></span>
-      <div class="meta"><b>No.03</b><span class="live"><span class="dot"></span>live</span></div>
+      <div class="meta"><b>No.02</b><span class="live"><span class="dot"></span>live</span></div>
       <div class="art" aria-hidden="true">
         <svg viewBox="0 0 320 176" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3">
           <g transform="translate(62 38)">
@@ -471,7 +433,7 @@
 
     <a class="card scr" href="/scrawl/">
       <span class="crop" aria-hidden="true"></span><span class="tape" aria-hidden="true"></span>
-      <div class="meta"><b>No.04</b><span class="live"><span class="dot"></span>live</span></div>
+      <div class="meta"><b>No.03</b><span class="live"><span class="dot"></span>live</span></div>
       <div class="art" aria-hidden="true">
         <svg viewBox="0 0 320 176" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path d="M66 124 C80 74 110 58 126 80 S148 130 170 100 S194 44 220 66" stroke="currentColor" stroke-width="6"/>
@@ -490,9 +452,9 @@
       <span class="go">Grab the pen <svg viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h30" stroke-dasharray="5 4"/><path d="M27 1l5 5-5 5"/></svg></span>
       <span class="note hand">it's definitely a cat</span>
     </a>
-    <a class="card dp wide" href="/doodle-pin/">
+    <a class="card dp" href="/doodle-pin/">
       <span class="crop" aria-hidden="true"></span><span class="tape" aria-hidden="true"></span>
-      <div class="meta"><b>No.05</b><span class="live"><span class="dot"></span>live</span></div>
+      <div class="meta"><b>No.04</b><span class="live"><span class="dot"></span>live</span></div>
       <div class="art" aria-hidden="true">
         <svg viewBox="0 0 400 240" fill="none" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="xMidYMid meet">
           <rect x="0" y="0" width="400" height="22" fill="currentColor" fill-opacity=".12"/>
